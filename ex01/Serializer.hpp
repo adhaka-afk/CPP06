@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:30:16 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/02 23:35:01 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/03 21:10:58 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ struct Data
 
 class Serializer
 {
-	public:
-		Serializer() {}
+	private:
+		Serializer();
+		~Serializer();
 
+	public:
 		static uintptr_t serialize(Data *ptr);
 		static Data *deserialize(uintptr_t raw);
 };

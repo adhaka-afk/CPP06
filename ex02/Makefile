@@ -6,7 +6,7 @@
 #    By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/06 07:54:28 by adhaka            #+#    #+#              #
-#    Updated: 2024/07/03 00:07:54 by adhaka           ###   ########.fr        #
+#    Updated: 2024/07/03 22:21:43 by adhaka           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ CFLAGS			= -Wall -Wextra -Werror -std=c++98
 
 HEADERS			=	Base.hpp
 
-SRCS			=	main.cpp
+SRCS			=	Base.cpp \
+					main.cpp
 
 OBJS			= $(SRCS:.cpp=.o)
 

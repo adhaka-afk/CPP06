@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:31:51 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/03 05:21:43 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/03 22:38:58 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,26 +48,26 @@ void identify(Base &p)
 {
 	try
 	{
-		(void)dynamic_cast<A&>(p);
+		(void)dynamic_cast<A &>(p);
 		std::cout << "Identified (reference) A" << std::endl;
 	}
-	catch (std::bad_cast &e)
+	catch (const std::exception &e)
 	{
 	}
 	try
 	{
-		(void)dynamic_cast<B&>(p);
+		(void)dynamic_cast<B &>(p);
 		std::cout << "Identified (reference) B" << std::endl;
 	}
-	catch (std::bad_cast &e)
+	catch (const std::exception &e)
 	{
 	}
 	try
 	{
-		(void)dynamic_cast<C&>(p);
+		(void)dynamic_cast<C &>(p);
 		std::cout << "Identified (reference) C" << std::endl;
 	}
-	catch (std::bad_cast &e)
+	catch (const std::exception &e)
 	{
 	}
 }

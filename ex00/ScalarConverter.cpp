@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:28:36 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/03 04:22:36 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/03 21:34:20 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,14 +90,14 @@ void ScalarConverter::convert(const std::string &literal)
 	double val;
 	char *endPtr = NULL;
 
-	if (literal.length() == 1 && std::isalpha(literal[0]))
+	if (literal.length() == 1)
 	{
 		val = static_cast<double>(literal[0]);
 	}
 	else
 	{
 		val = std::strtod(literal.c_str(), &endPtr);
-		if (endPtr == literal.c_str() || (*endPtr != '\0' && *endPtr != 'f') || endPtr != literal.c_str() + literal.size())
+		if (endPtr == literal.c_str() || (*endPtr != '\0' && !(*endPtr == 'f' && endPtr == literal.c_str() + literal.size() - 1)))
 		{
 			std::cout << "Invalid input." << std::endl;
 			return;

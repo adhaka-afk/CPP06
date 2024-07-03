@@ -6,7 +6,7 @@
 /*   By: adhaka <adhaka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 08:31:55 by adhaka            #+#    #+#             */
-/*   Updated: 2024/07/03 00:14:41 by adhaka           ###   ########.fr       */
+/*   Updated: 2024/07/03 22:20:26 by adhaka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Base
 {
 public:
-	virtual ~Base() {}
+	virtual ~Base();
 };
 
 class A : public Base
